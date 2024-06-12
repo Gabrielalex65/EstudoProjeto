@@ -13,6 +13,6 @@ export default class formValidation extends LightningElement {
     }
 
     handleChange(event) {
-        console.log('You selected an account: ' + event.detail.value[0]);
+        console.log('Voce selecionou: ' + event.detail.value[0]);
     }
 }
