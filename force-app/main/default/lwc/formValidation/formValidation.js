@@ -6,7 +6,7 @@ export default class formValidation extends LightningElement {
         this.dispatchEvent(
             new ShowToastEvent({
                 title: 'Success',
-                message: event.detail.apiName + ' created.',
+                message: 'Operação criada.',
                 variant: 'success',
             })
         );
