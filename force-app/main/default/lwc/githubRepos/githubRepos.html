@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="GitHub Repositories">
+        <template if:true={repositories}>
+            <ul>
+                <template for:each={repositories} for:item="repo">
+                    <li key={repo.id}>{repo.name}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={repositories}>
+            No repositories found.
+        </template>
+    </lightning-card>
+</template> 
