@@ -1,5 +1,12 @@
 <template>
     <lightning-card title="GitHub Repositories">
+
+        <lightning-input value={inputValue} onchange={handleInputChange}>
+
+        </lightning-input>
+
+        <lightning-button label="Enviar" onclick={handleClick} ></lightning-button>
+        <template if:true={buttonClicked}>
         <template if:true={repositories}>
             <ul>
                 <template for:each={repositories} for:item="repo">
@@ -10,5 +17,9 @@
         <template if:false={repositories}>
             No repositories found.
         </template>
+
+        </template>
+
+
     </lightning-card>
 </template> 

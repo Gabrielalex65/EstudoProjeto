@@ -9,7 +9,10 @@ export default class CounterLWC extends LightningElement {
     }    
 
     handleClickMinus(event) {
-        this.counterValue -= 1;
+        if(this.counterValue != 0){
+            this.counterValue -= 1;
+        }
+        
         console.log(this.counterValue);
     } 
 }

@@ -2,9 +2,17 @@ import { LightningElement, track } from 'lwc';
 
 export default class GitHubRepos extends LightningElement {
     @track repositories;
+    @track inputUsername;
+    @track buttonClicked;
 
-    connectedCallback() {
-        this.fetchRepositories('gabrielalex65');
+    handleInputChange(event) {
+        this.inputUsername = event.target.value;
+    } 
+
+    handleClick(event) {
+        
+        this.fetchRepositories(this.inputUsername);
+        this.buttonClicked = true;
     }
 
     fetchRepositories(username) {
